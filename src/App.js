@@ -12,12 +12,13 @@ function App() {
   return (
    <div className="App">
       <textarea placeholder='ENTER YOUR TEXT HERE' value={inputData} onChange={(e)=>handleChange(e)} className='input__box'/>
-      
+
       <div style={{height: show?'fit-content': '100px'}} className="display__box">
         <p>{inputData}</p>
+        <button className='show__btn' onClick={()=> setShow(preVal => !preVal)}>Show More</button>
       </div>
 
-       <button className='show__btn' onClick={()=> setShow(preVal => !preVal)}>Show More</button>
+       
     </div>
   );
 }
